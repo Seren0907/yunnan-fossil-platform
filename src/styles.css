@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #20302f;
+  background: #f7f2e8;
+  font-family: "Microsoft YaHei", "PingFang SC", "Noto Sans SC", Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+}
+
+.fossil-plate {
+  background:
+    radial-gradient(circle at 24% 35%, rgba(255,255,255,.35), transparent 16%),
+    radial-gradient(circle at 70% 68%, rgba(31,138,131,.18), transparent 18%),
+    linear-gradient(135deg, #d9d0bd, #b7afa0);
+}
+
+.fossil-line {
+  position: absolute;
+  inset: 22%;
+  border: 3px solid rgba(23, 50, 77, .55);
+  border-left-color: transparent;
+  border-radius: 55% 45% 52% 48%;
+  transform: rotate(-18deg);
+}
+
+.fossil-line::before,
+.fossil-line::after {
+  content: "";
+  position: absolute;
+  background: rgba(23, 50, 77, .45);
+  border-radius: 999px;
+}
+
+.fossil-line::before {
+  width: 58%;
+  height: 3px;
+  left: 24%;
+  top: 48%;
+}
+
+.fossil-line::after {
+  width: 3px;
+  height: 46%;
+  left: 48%;
+  top: 26%;
+  transform: rotate(48deg);
+}
